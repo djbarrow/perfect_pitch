@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="PPWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuSample_Manipulation">
+    <property name="title">
+     <string>Sample Manipulation</string>
+    </property>
+    <addaction name="actionStart_Recording"/>
+    <addaction name="actionStart_Playback"/>
+    <addaction name="actionMaximise_Sample_Volume"/>
+    <addaction name="actionGenerate_Test_Sample"/>
+    <addaction name="actionStop_Current_Work"/>
+   </widget>
+   <widget class="QMenu" name="menuResonance_Analysis">
+    <property name="title">
+     <string>Resonance Analysis</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionStart_Resonance_Analysis"/>
+    <addaction name="actionPlayback_Resonance_Analysis"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuSample_Manipulation"/>
+   <addaction name="menuResonance_Analysis"/>
+  </widget>
+  <widget class="PPStatusBar" name="statusbar"/>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+  <action name="actionStart_Recording">
+   <property name="text">
+    <string>Start Recording</string>
+   </property>
+  </action>
+  <action name="actionStart_Playback">
+   <property name="text">
+    <string>Start Playback</string>
+   </property>
+  </action>
+  <action name="actionMaximise_Sample_Volume">
+   <property name="text">
+    <string>Maximise Sample Volume</string>
+   </property>
+  </action>
+  <action name="actionGenerate_Test_Sample">
+   <property name="text">
+    <string>Generate Test Sample</string>
+   </property>
+  </action>
+  <action name="actionStop_Current_Work">
+   <property name="text">
+    <string>Stop Current Work</string>
+   </property>
+  </action>
+  <action name="actionStart_Resonance_Analysis">
+   <property name="text">
+    <string>Start Resonance Analysis</string>
+   </property>
+  </action>
+  <action name="actionPlayback_Resonance_Analysis">
+   <property name="text">
+    <string>Playback Resonance Analysis</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PPWidget</class>
+   <extends>QWidget</extends>
+   <header>ppwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PPStatusBar</class>
+   <extends>QStatusBar</extends>
+   <header>ppstatusbar.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
